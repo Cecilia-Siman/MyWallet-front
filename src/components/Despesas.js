@@ -5,11 +5,9 @@ import { LoginContext } from "../Contexts/LoginComponent";
 import { useNavigate } from 'react-router-dom';
 
 export default function Despesas() {
-    const {token,userName} = React.useContext(LoginContext);
+    const {setToken,token,userName} = React.useContext(LoginContext);
     const [listaDespesas, setListaDespesas] = React.useState([]);
     const navigate = useNavigate();
-    console.log("token: ",token);
-    console.log("nome: ", userName);
 
     React.useEffect(() => {
         const req = axios.get('http://localhost:5000/despesas',{
@@ -48,6 +46,7 @@ export default function Despesas() {
 
     function exit(){
         navigate('/');
+        setToken("");
     }
 
     return (
