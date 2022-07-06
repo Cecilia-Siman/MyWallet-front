@@ -21,7 +21,7 @@ export default function Login() {
             password:password,
         };
         
-        const requisicao = axios.post('http://localhost:5000/',obj);
+        const requisicao = axios.post('https://back-projeto13-cecilia.herokuapp.com/',obj);
         requisicao.then(success);
         function success(resposta){ 
             setUserName(resposta.data.name); 

@@ -18,7 +18,7 @@ export default function Cadastro() {
         };
         console.log(obj);
         
-        const requisicao = axios.post('http://localhost:5000/cadastro',obj);
+        const requisicao = axios.post('https://back-projeto13-cecilia.herokuapp.com/cadastro',obj);
         requisicao.then(function (sucesso){
             alert("cadastrado!");
         });

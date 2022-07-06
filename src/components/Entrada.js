@@ -18,7 +18,7 @@ export default function Entrada() {
         };
         console.log(obj);
         
-        const requisicao = axios.post('http://localhost:5000/entrada',obj,{
+        const requisicao = axios.post('https://back-projeto13-cecilia.herokuapp.com/entrada',obj,{
             headers: { token }
         });
         requisicao.then(function (sucesso){

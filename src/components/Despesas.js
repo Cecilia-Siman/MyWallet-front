@@ -10,7 +10,7 @@ export default function Despesas() {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        const req = axios.get('http://localhost:5000/despesas',{
+        const req = axios.get('https://back-projeto13-cecilia.herokuapp.com/despesas',{
             headers: { token }
         });
         req.then(su);

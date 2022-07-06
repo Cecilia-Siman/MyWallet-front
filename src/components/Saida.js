@@ -18,7 +18,7 @@ export default function Saida() {
         };
         console.log(obj);
         
-        const requisicao = axios.post('http://localhost:5000/saida',obj,{
+        const requisicao = axios.post('https://back-projeto13-cecilia.herokuapp.com/saida',obj,{
             headers: { token }
         });
         requisicao.then(function (sucesso){
